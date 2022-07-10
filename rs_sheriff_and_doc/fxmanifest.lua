@@ -6,12 +6,12 @@ author 'Hobbs'
 
 server_scripts {
     'configs/*.lua',
-	'**/server/*.lua'
+    '**/server/*.lua'
 }
 
 client_scripts {
     'configs/*.lua',
-	'**/client/*.lua'
+    '**/client/*.lua'
 }
 
-dependency 'vorp_core'
+dependency 'vorpcore'
