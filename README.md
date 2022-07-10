@@ -5,6 +5,8 @@ Since every existing script was missing something or far too much, I put togethe
 ## Credits <br> 
 to everyone else who has published similar scripts! #VORPCORE
 
+## Job description <br>
+<br>
 *Sheriff* <br>
 -Sheriff badge on and off <br>
 -Handcuffs on and off <br>
