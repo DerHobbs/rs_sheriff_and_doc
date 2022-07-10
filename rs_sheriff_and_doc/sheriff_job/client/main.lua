@@ -45,7 +45,7 @@ function openPolicemenu()
 		{label = "Put off handcuffs", value = 'uncuff' , desc = "Handcuffs off"},
         {label = "Escort", value = 'drag' , desc = "Escort the citizen"}
 	}
-   MenuData.Open('default', GetCurrentResourceName(), 'menuapi',
+    MenuData.Open('default', GetCurrentResourceName(), 'menuapi',
 	{
 		title    = "Sheriff menu",
 		subtext  = "Sheriff Interactions",
