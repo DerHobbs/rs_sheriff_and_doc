@@ -18,9 +18,9 @@ Todo: Put the handcuffed player in the jail car <br>
 -Player heal<br>
 -Revive player<br>
 <br>
-## How to Install?
-1. Copy the Folder into your resources/ folder
-2. Add `rs_sheriff_and_doc` to your server.cfg
-
-## Dependencies
+## How to Install? <br> 
+1. Copy the Folder into your resources/ folder <br> 
+2. Add `rs_sheriff_and_doc` to your server.cfg <br> 
+<br> 
+## Dependencies <br> 
 * [menuapi](https://github.com/outsider31000/menuapi) from Outsider
