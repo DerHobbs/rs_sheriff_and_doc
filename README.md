@@ -2,7 +2,8 @@
 Simple sheriff and doctor job with the most important functions
 
 Since every existing script was missing something or far too much, I put together one that fully meets my needs. <br>
-Credits to everyone else who has published similar scripts! #VORPCORE
+## Credits <br> 
+to everyone else who has published similar scripts! #VORPCORE
 
 *Sheriff* <br>
 -Sheriff badge on and off <br>
