@@ -70,21 +70,24 @@ function openPolicemenu()
         end
         TriggerEvent("vorp:TipRight", "Sheriff star put off", 3000)
 
-        elseif (data.current.value == 'cuff') then
+        elseif 
+            (data.current.value == 'cuff') then
             local closestPlayer, closestDistance = GetClosestPlayer()
             if closestPlayer ~= -1 and closestDistance <= 1.0 then
                 TriggerServerEvent("rs_sheriff:cuffplayer", GetPlayerServerId(closestPlayer))
                 TriggerEvent("vorp:TipRight", "Handcuffs on", 3000)
             end
 
-        elseif (data.current.value == 'uncuff') then
+        elseif
+            (data.current.value == 'uncuff') then
             local closestPlayer, closestDistance = GetClosestPlayer()
             if closestPlayer ~= -1 and closestDistance <= 1.0 then
                 TriggerServerEvent("rs_sheriff:uncuffplayer", GetPlayerServerId(closestPlayer))
                 TriggerEvent("vorp:TipRight", "Handcuffs off", 3000)
             end
 
-        elseif (data.current.value == 'drag') then
+        elseif
+            (data.current.value == 'drag') then
             local closestPlayer, closestDistance = GetClosestPlayer()
             if closestPlayer ~= -1 and closestDistance <= 1.0 then
                 TriggerServerEvent("rs_sheriff:drag", GetPlayerServerId(closestPlayer))
