@@ -27,11 +27,9 @@ Citizen.CreateThread(function()
     while true do
         local ped = GetPlayerPed()
         local coords = GetEntityCoords(PlayerPedId())
-
         if whenKeyJustPressed(0x3C3DD371) then
             TriggerServerEvent("rs_sheriff:checkjob")
         end
-
         Citizen.Wait(5)
     end
 end)
@@ -39,24 +37,24 @@ end)
 function openPolicemenu()
 	MenuData.CloseAll()
 	local elements = {
-		{label = "Sheriff star on", value = 'star' , desc = "Sheriff star put on"},
+        {label = "Sheriff star on", value = 'star' , desc = "Sheriff star put on"},
         {label = "Sheriff star off", value = 'unstar' , desc = "Sheriff star put off"},
-		{label = "Put on handcuffs", value = 'cuff' , desc = "Handcuffs on"},
-		{label = "Put off handcuffs", value = 'uncuff' , desc = "Handcuffs off"},
+        {label = "Put on handcuffs", value = 'cuff' , desc = "Handcuffs on"},
+        {label = "Put off handcuffs", value = 'uncuff' , desc = "Handcuffs off"},
         {label = "Escort", value = 'drag' , desc = "Escort the citizen"}
-	}
+    }
     MenuData.Open('default', GetCurrentResourceName(), 'menuapi',
-	{
+    {
 		title    = "Sheriff menu",
 		subtext  = "Sheriff Interactions",
 		align    = 'top-left',
 		elements = elements,
 	},
 	function(data, menu)
-		if (data.current.value == 'star') then
+        if (data.current.value == 'star') then
             Citizen.InvokeNative(0xD710A5007C2AC539, PlayerPedId(), 0x3F7F3587, 0)
             Citizen.InvokeNative(0xCC8CA3E88256E58F, PlayerPedId(), 0, 1, 1, 1, 0)
-			if IsPedMale(ped) then
+            if IsPedMale(ped) then
                 Citizen.InvokeNative(0xD3A7B003ED343FD9, PlayerPedId(), 0x1FC12C9C,true,true,true)
             else
                 Citizen.InvokeNative(0xD3A7B003ED343FD9, PlayerPedId(), 0x1FC12C9C,true,true,true)
@@ -64,7 +62,7 @@ function openPolicemenu()
             TriggerEvent("vorp:TipRight", "Sheriff star put on", 3000)
         elseif
             (data.current.value == 'unstar') then 
-			if not IsPedMale(ped) then
+        if not IsPedMale(ped) then
             Citizen.InvokeNative(0xD710A5007C2AC539, PlayerPedId(), 0x3F7F3587, 0)
             Citizen.InvokeNative(0xCC8CA3E88256E58F, PlayerPedId(), 0, 1, 1, 1, 0)
         end
@@ -92,13 +90,12 @@ function openPolicemenu()
             if closestPlayer ~= -1 and closestDistance <= 1.0 then
                 TriggerServerEvent("rs_sheriff:drag", GetPlayerServerId(closestPlayer))
                 TriggerEvent("vorp:TipRight", "Escort the citizen", 3000)
-
             end
-		end
-	end,
-	function(data, menu)
-		menu.close()
-	end)
+        end
+    end,
+    function(data, menu)
+        menu.close()
+    end)
 end
 
 RegisterNetEvent("rs_sheriff:open")
