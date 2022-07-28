@@ -13,7 +13,7 @@ AddEventHandler("rs_sheriff:checkjob", function()
         TriggerClientEvent('rs_sheriff:open', _source)
 	elseif job == "sheriffrho" then
         TriggerClientEvent('rs_sheriff:open', _source)
-    elseif job == "sheriffbw" then
+        elseif job == "sheriffbw" then
         TriggerClientEvent('rs_sheriff:open', _source)
 	elseif job == "sheriffstr" then
         TriggerClientEvent('rs_sheriff:open', _source)
