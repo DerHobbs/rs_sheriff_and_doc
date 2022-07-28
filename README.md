@@ -25,3 +25,11 @@ Todo: Put the handcuffed player in the jail car <br>
 ## Dependencies
 
 * [menuapi](https://github.com/outsider31000/menuapi)
+
+## If you use syn_society <br> 
+If you can add this to both server sides, then the menu will only open if the corresponding job is on duty. <br>
+
+```if exports["syn_society"]:IsPlayerOnDuty(_source,job) == true then``` <br>
+
+![Screenshot_5](https://user-images.githubusercontent.com/101003021/181524385-a5d85a2b-2bcd-49ff-8f0c-0c87e807daeb.png)
+
